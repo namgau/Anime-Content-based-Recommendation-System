@@ -11,9 +11,6 @@
 	Chạy Streamlit app:
 	streamlit run ten_file_dashboard.py
 
-	Truy cập ứng dụng tại địa chỉ:
-	http://localhost:8501/
-
 3. Hướng dẫn sử dụng dashboard
 	Sidebar - Bộ lọc
 	Chọn Label: Lọc theo review Tốt (≥6 vote tích cực) hoặc Xấu (<6).
