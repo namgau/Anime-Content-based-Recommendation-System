@@ -11,8 +11,6 @@ df['Review_length'] = df['Review'].dropna().apply(len)
 
 # Tạo cột Label (giả sử phân loại review tốt nếu Pos_Feedback_Cnt >= 6, ngược lại là xấu)
 df['Label'] = df['Pos_Feedback_Cnt'].apply(lambda x: 'Tốt' if x >= 6 else 'Xấu')
-good_review = df[df['Label'] == 'Tốt']
-bad_review = df[df['Label'] == 'Xấu']
 
 st.set_page_config(layout="wide")
 st.title("📊 Dashboard EDA - Women Clothing Reviews")
@@ -22,7 +20,7 @@ st.sidebar.header("🔍 Bộ lọc")
 selected_label = st.sidebar.selectbox("Chọn Label:", options=df['Label'].unique())
 length_range = st.sidebar.slider("Chọn độ dài review:", int(df['Review_length'].min()), int(df['Review_length'].max()), (20, 300))
 
-# Lọc dữ liệu
+# Lọc dl
 df_filtered = df[(df['Label'] == selected_label) & (df['Review_length'].between(*length_range))]
 
 # Tabs layout
