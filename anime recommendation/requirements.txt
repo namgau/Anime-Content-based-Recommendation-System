@@ -1,0 +1,4 @@
+numpy
+scrapy
+pandas
+tabulate
