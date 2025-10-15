@@ -62,4 +62,4 @@ pip install -r requirements.txt
 jupyter notebook
 
 # 4. Run main notebook
-Open "Anime_Recommendation_System.ipynb" and execute all cells
+Open "Anime_Recommendation_Notebook.ipynb" and execute all cells
