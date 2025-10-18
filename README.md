@@ -6,6 +6,7 @@ Since real user rating data was not available, the **user dataset was generated*
 ---
 
 ## Dataset Information
+**1. animes.csv**
 The dataset contains **2050 anime entries** with the following key features:
 - **Title** – name of the anime  
 - **Score** – average community rating  
@@ -13,6 +14,29 @@ The dataset contains **2050 anime entries** with the following key features:
 - **Popularity, Members, Episodes**  
 - **76 genre attributes** (one-hot encoded) such as *Action, Romance, Mecha, Slice of Life,* etc.  
 - **Synopsis & Link** for reference  
+
+**2.anime_genre_binary.csv**
+A one-hot encoded version of animes.csv, where each of the 76 genres is represented as a binary column.
+This version is optimized for machine learning models and feature engineering.
+
+Genres include:
+Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, Supernatural, Mecha, Isekai, and many others.
+
+**3.list_of_users.csv**
+This dataset contains 250 synthetic user profiles, each representing their genre preference strength (on a scale from 0 to 10).
+These scores can be interpreted as how much a user enjoys each genre.
+Column	Description
+user_id	Unique user identifier
+#Genre Columns	Numeric preference score for each genre (0–10)
+
+**4.training_data.csv**
+A synthetic interaction dataset simulating how users rate anime titles.
+
+Column	Description
+user_id:	Reference to user in list_of_users.csv
+anime_id:	Reference to anime in animes.csv
+score:	Rating given by the user (0–10 scale)
+
 
 ---
 
